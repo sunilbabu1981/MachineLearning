@@ -1,0 +1,28 @@
+kNN = k Nearest Neighbors
+kNN is one of the most popular classification algorithm.
+The concept of a kNN approach : Given a positive integer K and a test observation x0, the kNN classifier identifies the first K points in 
+the training data that are closest to x0 and the majority class of those K points is the predicted label for x0.
+
+Pros : 
+1. High accuracy 
+2. insensitive to Outliers
+3. No Assumptions about data
+
+Cons: 
+1. Computqtionally expensive
+2. Requires a lot of memory
+
+Works with:
+1. Numerical values
+2. Nominal values
+
+Algoithmic steps
+
+1. There exists a training set with labels (i.e) classes
+2. When a new piece of data is given
+      a. Compare this new piece with every data in Training set and calculate the distance between them.
+      b. Pick the most similar pieces of data (i.e.) their neighbours. 
+      c. Pick the neighbour's corresponding classes / labels
+      d. Sort the training set in the ascending order of their distance from the new piece of data.
+      e. Look at the top k observations and pick the majority class among the k observations, as the predicted class of the new piece of data.
+      
