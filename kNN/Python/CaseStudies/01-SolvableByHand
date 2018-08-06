@@ -16,5 +16,78 @@ Using Euclidean Distance calculated as
 
 d = SQRT((xA0 - xB0)^2 + (xA1-xB1)^2
 
-where xA0 and xA1 are both the points whose class/label needs to be deterined.
-and xB0 and XB2 are the actual plans in the traiinng dataset.
+where xA0 and xA1 are both the points whose class/label needs to be determined.
+and xB0 and XB2 are the actual points in the training dataset.
+
+Assuming SNo refers to the movies, we will use d+ i(where i = serialno) to refer to distance between the ith movie and the unknown 
+movie (SNo.7) 
+eg., d1 refers to the distancce between the movie California Man and the unknown movie and d6 refers to distance between Amped II and
+the unknown movie. 
+
+Then
+
+when i = 1
+d1 = distance between (3,104) and (18,90)
+
+Substituting in the euclidean distance formula
+
+d1 = SquareRoot of [(3-18)^2 + (90-104)^2]
+   = SquareRoot of [(-15)^2 + (-14)^2]
+   = SquareRoot of [225 + 196]
+   = SquareRoot of [421]
+d1 = 20.52
+
+Calculating in the similar fashion from d2 through d7 we get
+
+when i = 2
+d2 = distance between (2,100) and (18,90)
+and by euclidean distance formula
+d2 = 18.87
+
+when i = 3
+d3 = distance between (1,81) and (18,90)
+d3 = 19.24
+
+when i = 4
+d4 = 115.3
+
+when i = 5
+d5 = 117.4
+
+when i = 6
+d6 = 118.93
+
+Now that we have the distance lets arrange the movies in the original order along with their distance from the unknown Movie
+
+
+SNo.  MovieTitle                   # of kicks          # of kisses        Genre       Distance from the unknown movie
+1     California Man                    3                   104           Romance      20.52
+2     He's not really into dudes        2                   100           Romance      18.87
+3.    Beautiful woman                   1                    91           Romance      19.24
+4.    Kevin Longblade                 101                    10           Action      115.30
+5.    Robo slayer 3000                 99                     5           Action      117.40
+6.    Amped II                         98                     2           Action      118.93
+
+Arranging the list in the order of increasing distance from the unknown movie, it would be
+
+SNo.  MovieTitle                   # of kicks          # of kisses        Genre       Distance from the unknown movie
+2     He's not really into dudes        2                   100           Romance      18.87
+3.    Beautiful woman                   1                    91           Romance      19.24
+1     California Man                    3                   104           Romance      20.52
+4.    Kevin Longblade                 101                    10           Action      115.30
+5.    Robo slayer 3000                 99                     5           Action      117.40
+6.    Amped II                         98                     2           Action      118.93
+
+If we decide to have K as 4, then the top 4 movies closer to the unknown movie are
+
+SNo.  MovieTitle                   # of kicks          # of kisses        Genre       Distance from the unknown movie
+2     He's not really into dudes        2                   100           Romance      18.87
+3.    Beautiful woman                   1                    91           Romance      19.24
+1     California Man                    3                   104           Romance      20.52
+4.    Kevin Longblade                 101                    10           Action      115.30
+
+The goal is to find the genre of the unknown movie. In the above list we find that the top 4 picks have 2 genres namely Romance
+and Action with Romance garnering 3 votes and Action garnering 1. So the majority of the classes/labels that surround the unknown movie is
+"Romance" and hence the unkonwn movie should fall into the "Romance" category.
+
+
