@@ -1,0 +1,12 @@
+Exercise 2
+
+From a given set of points and labels find which one is closer to (0.5,1)
+
+[1.0,1.1] => A
+[1.0,1.0] => A
+[0,0]     => B
+[0,0.1]   => B
+
+Solution by Hand,
+
+Remember the Euclidean distance formula 
