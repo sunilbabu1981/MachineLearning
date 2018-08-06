@@ -1,0 +1,20 @@
+Using kNN algorithm find the category of the movie denoted by "?"
+
+SNo.  MovieTitle                   # of kicks          # of kisses           Genre
+1     California Man                    3                   104           Romance
+2     He's not really into dudes        2                   100           Romance
+3.    Beautiful woman                   1                    91           Romance
+4.    Kevin Longblade                 101                    10           Action
+5.    Robo slayer 3000                 99                     5           Action
+6.    Amped II                         98                     2           Action
+7.    ?                                18                    90           UNKNOWN
+
+SOLUTION
+--------
+
+Using Euclidean Distance calculated as
+
+d = SQRT((xA0 - xB0)^2 + (xA1-xB1)^2
+
+where xA0 and xA1 are both the points whose class/label needs to be deterined.
+and xB0 and XB2 are the actual plans in the traiinng dataset.
